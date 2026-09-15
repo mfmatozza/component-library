@@ -1,5 +1,16 @@
 # Decisions
 
+## 2026-09-15 — Pushed to a private GitHub repo, skill folded in as a symlink
+
+Moved `no-design-slop` from a standalone `~/.claude/skills/` folder into
+`claude-skills/no-design-slop/` inside this repo, and replaced the original
+location with a symlink. One source of truth, tracked by git, and it loads
+automatically in Claude Code on any machine after running `install.sh`
+(which recreates the symlink). Repo is private — the code itself has nothing
+sensitive in it, but `tokens/design-tokens.md` documents internals of
+several private projects, so private is the safer default. Flip to public
+later if that stops mattering.
+
 ## 2026-09-15 — Copy-paste library, not an npm package
 
 Considered a private npm package / monorepo workspace. Rejected: your projects
